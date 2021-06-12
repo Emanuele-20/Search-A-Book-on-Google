@@ -1,0 +1,11 @@
+{
+  "name": "codesubmission",
+  "version": "1.0.0",
+  "description": "Find your book with Google",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Emanuele P.",
+  "license": "ISC"
+}
