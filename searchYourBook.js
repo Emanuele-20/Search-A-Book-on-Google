@@ -6,7 +6,7 @@ function getYourBook(){
         return answer.json()
     })
     .then(answer => {
-        console.log(answer)
+        console.log(answer.items[0].volumeInfo.title)
     })
 }
 
