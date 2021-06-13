@@ -6,9 +6,11 @@ function getYourBook(){
         return answer.json()
     })
     .then(answer => {
-        console.log(answer.items[0].volumeInfo.title)
-        console.log(answer.items[0].volumeInfo.authors[0])
-        console.log(answer.items[0].volumeInfo.publisher)
+        for(let i = 0; i < 5; i++){
+            console.log(answer.items[i].volumeInfo.title)
+            console.log(answer.items[i].volumeInfo.authors[0])
+            console.log(answer.items[i].volumeInfo.publisher)
+        }
     })
 }
 
