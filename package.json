@@ -9,6 +9,7 @@
   "author": "Emanuele P.",
   "license": "ISC",
   "dependencies": {
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.1",
+    "readline-sync": "^1.4.10"
   }
 }
