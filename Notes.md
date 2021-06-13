@@ -8,6 +8,42 @@ This challenge will be attack using NodeJS.
 5. Create function
 6. Add npm "node-fetch" package to use and run " fetch " on my command line application
 7. Manage the promise to console log the title, authors and publishing company for the first 5 books
+```
+function getYourBook(){
+    fetch('https://www.googleapis.com/books/v1/volumes?q=Invisible Man')
+    .then(answer => {
+        return answer.json()
+    })
+    .then(answer => {
+        for(let i = 0; i < 5; i++){
+            console.log(answer.items[i].volumeInfo.title)
+            console.log(answer.items[i].volumeInfo.authors[0])
+            console.log(answer.items[i].volumeInfo.publisher)
+            console.log('\n')
+        }
+    })
+    .catch(answer => console.log("Ops, I can't reach this information"))
+}
+```
+8. Trying to implement with async function
+```
+async function getYourBook(){
+    const resp = await fetch('https://www.googleapis.com/books/v1/volumes?q=harrypotter')
+    const data = await resp.json()
+    const filter =  await data.items.forEach(el => {
+        console.log(el.volumeInfo.title)
+        console.log(el.volumeInfo.authors[0])
+        console.log(el.volumeInfo.publisher)
+        console.log('\n')
+    })
+    return filter
+}
+```
+
+
+
+
+
 
 
 
