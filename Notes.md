@@ -6,7 +6,9 @@ This challenge will be attack using NodeJS.
 4. Inizialize Npm
 
 5. Create function
-6. Add  npm "node-fetch" package to use and run " fetch " on my command line application
+6. Add npm "node-fetch" package to use and run " fetch " on my command line application
+7. Manage the promise to console log the title, authors and publishing company for the first 5 books
+
 
 
 
@@ -14,3 +16,6 @@ This challenge will be attack using NodeJS.
 In order to run this file  in the terminal I use this command: 
 - node -i -e "$(< searchYourBook.js)" 
 
+
+> a[0].volumeInfo[0]
+[Function: Object]
