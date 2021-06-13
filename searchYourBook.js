@@ -7,7 +7,8 @@ function getYourBook(){
     })
     .then(answer => {
         console.log(answer.items[0].volumeInfo.title)
+        console.log(answer.items[0].volumeInfo.authors[0])
+        console.log(answer.items[0].volumeInfo.publisher)
     })
 }
 
-getYourBook()
