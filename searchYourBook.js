@@ -11,18 +11,15 @@ async function getYourBook(title){
             .forEach(element => {
             books.push(`Title: ${element.volumeInfo.title} -  `+ `Author: ${element.volumeInfo.authors[0]} -  `+ `Publishing Company: ${element.volumeInfo.publisher}`)
         })
-        console.log(books.join("\n"))
+        //console.log(books.join("\n"))
     } catch (err){
         console.log("Opss, something did wrong", err)
     } 
 }
 
-function getReadingList(){
-    //let index = readlineSync.keyInSelect(books, "Which book do you want to save in your reading list?")
-    console.log(books)
-    // readingList.push(books[index])
-    // console.log(readingList)
-    
+function populateReadingList(index){
+    readingList.push(books[index])
+    console.log("Your selection is saved ") 
 }
 
 
@@ -30,8 +27,8 @@ async function start(){
     let book = await readlineSync.question("Hello, which book are you looking for? \n")
     await getYourBook(book)
     let index = await readlineSync.keyInSelect(books, "Which book do you want to save in your reading list?")
-    console.log(books[index])
-    //await getReadingList()
+    await populateReadingList(index)
+    console.log(`Your Reading List: ${readingList.join("\n")}`)
 }
 
 start()
