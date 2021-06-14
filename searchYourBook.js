@@ -8,20 +8,17 @@ async function getYourBook(title){
         const data = await resp.json()
         const filter = await data.items.slice(0,5)
             .forEach(element => {
-            books.push('Title:', element.volumeInfo.title)
-            books.push('Author:',element.volumeInfo.authors[0])
-            books.push('Publishing Company:',element.volumeInfo.publisher)
-            console.log('\n')
+            books.push(`Title: ${element.volumeInfo.title} -  `+ `Author: ${element.volumeInfo.authors[0]} -  `+ `Publishing Company: ${element.volumeInfo.publisher}`)
         })
-        return books
+        console.log(books.join("\n"))
     } catch (err){
         console.log("Opss, something did wrong", err)
     } 
 }
 
-// async function start(){
-//     let chose = await readlineSync.question("Hello, which book are you looking for? ")
-//     getYourBook(chose)
-// }
+function start(){
+    let chose = readlineSync.question("Hello, which book are you looking for? \n")
+    getYourBook(chose)
+}
 
-// start()
+start()
