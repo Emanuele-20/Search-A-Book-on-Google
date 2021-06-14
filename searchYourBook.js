@@ -1,9 +1,10 @@
 const fetch = require('node-fetch');
 const readlineSync = require('readline-sync');
+const books = []
+const readingList = []
 
 async function getYourBook(title){
     try{
-        let books = []
         const resp = await fetch('https://www.googleapis.com/books/v1/volumes?q=' + title)
         const data = await resp.json()
         const filter = await data.items.slice(0,5)
@@ -16,9 +17,21 @@ async function getYourBook(title){
     } 
 }
 
-function start(){
-    let chose = readlineSync.question("Hello, which book are you looking for? \n")
-    getYourBook(chose)
+function getReadingList(){
+    //let index = readlineSync.keyInSelect(books, "Which book do you want to save in your reading list?")
+    console.log(books)
+    // readingList.push(books[index])
+    // console.log(readingList)
+    
+}
+
+
+async function start(){
+    let book = await readlineSync.question("Hello, which book are you looking for? \n")
+    await getYourBook(book)
+    let index = await readlineSync.keyInSelect(books, "Which book do you want to save in your reading list?")
+    console.log(books[index])
+    //await getReadingList()
 }
 
 start()
