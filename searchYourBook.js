@@ -20,12 +20,12 @@ async function getYourBook(title){
 function populateReadingList(selectedBook){
     readingList.push(books[selectedBook])
     books.length = 0
-    return ("Your selection is saved")
+    return "Your selection is saved"
 }
 
 
 async function start(){
-
+try{
     while(true){
         const question = readlineSync.question("Hello, select 1 to search a book, select 2 to view yor Reading List, 'exit' to interrupt? \n")
         if (question === "1"){
@@ -44,6 +44,9 @@ async function start(){
                 break;
             }
         }
+    } 
+    } catch (err){
+        console.log("An error just happened, sorry", err)
     } 
 
 };
