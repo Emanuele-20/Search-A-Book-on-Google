@@ -1,5 +1,9 @@
 ## This challenge will be attack using NodeJS.
 
+### Used Trello card in order to set and track all the steps to follow
+
+### Pruduction Code
+
 1. Create a folder 
 2. Initialize Git
 3. Create README file and a Notes file

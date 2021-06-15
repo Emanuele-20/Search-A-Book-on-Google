@@ -16,6 +16,6 @@
 - Run "searchYourBook.js" file and follow the instruction
 - Enjoy your the research of your next book
 ---
-### Challenges faced
-Check the [Notes.md](https://github.com/Emanuele-20/Search-A-Book-on-Google/blob/main/Notes.md) file to follow my thoughts and steps that guided me to this solution.
+### Process and Approach
+Check the [Notes.md](https://github.com/Emanuele-20/Search-A-Book-on-Google/blob/main/Notes.md) file to follow process and approach that guided me to this solution.
 
