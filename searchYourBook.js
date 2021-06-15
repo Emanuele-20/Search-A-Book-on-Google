@@ -20,18 +20,18 @@ async function getYourBook(title){
 function populateReadingList(selectedBook){
     readingList.push(books[selectedBook])
     books.length = 0
-    return "Your selection is saved"
+    console.log("This book is saved in your reading list, thank you")
 }
 
 
 async function start(){
 try{
     while(true){
-        const question = readlineSync.question("Hello, select 1 to search a book, select 2 to view yor Reading List, 'exit' to interrupt?1\n", (userInput) => {console.log(userInput)})
+        const question = readlineSync.question("Hello, select 1 to search a book, select 2 to view yor Reading List, 'exit' to interrupt?\n")
         if (question === "1"){
-            const book =  readlineSync.question("Which book are you looking for? \n", (userInput) => {console.log(userInput)})
+            const book =  readlineSync.question("Which book are you looking for?\n")
             await getYourBook(book) 
-            const selectedBook = readlineSync.keyInSelect(books, "Which book do you want to save in your reading list?", (userInput) => {console.log(userInput);})
+            const selectedBook = readlineSync.keyInSelect(books, "Which book do you want to save in your reading list?\n")
             populateReadingList(selectedBook)
         } else if (question === "2") {    
             if (readingList.length == 0){
@@ -41,6 +41,7 @@ try{
             }
         } else {
             if (question === "exit"){
+                console.log("Thank you for using this program")
                 break;
             }
         }
