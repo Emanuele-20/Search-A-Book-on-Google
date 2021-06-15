@@ -13,8 +13,8 @@
 - Clone this repository
 - Open in your terminal
 - Run "npm install" to install the project dependencies
-- Run "searchYourBook.js" and follow the instruction
-- Enjoy your research
+- Run "searchYourBook.js" file and follow the instruction
+- Enjoy your the research of your next book
 ---
 ### Challenges faced
 Check the Notes.md file to follow my thoughts and steps that guided me to this solution.
