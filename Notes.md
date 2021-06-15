@@ -1,11 +1,10 @@
-This challenge will be attack using NodeJS.
+## This challenge will be attack using NodeJS.
 
 1. Create a folder 
 2. Initialize Git
 3. Create README file and a Notes file
 4. Inizialize Npm
-
-5. Create function
+5. Create function for fetch an API
 6. Add npm "node-fetch" package to use and run " fetch " on my command line application
 7. Manage the promise to console log the title, authors and publishing company for the first 5 books
 
@@ -64,20 +63,5 @@ async function getYourBook(title){
 10. Add readline package to interact with the user
 
 11. Add start() method to let the user comunicate better with the program
-
-
-
-
-
-
-
-
-
-
-
-In order to run this file  in the terminal I use this command: 
-- node -i -e "$(< searchYourBook.js)" 
-
-
-> a[0].volumeInfo[0]
-[Function: Object]
+12. Install the "read line Sync" package to acquire the user input 
+13. Automatize the process with a "while" loop, implementing a more friendly user experience 
