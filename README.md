@@ -17,4 +17,4 @@
 - Enjoy your research
 ---
 ### Challenges faced
-Check the Notes.md file to follow my thoughts and steps that guided me to this solution.
+Check the [I'm an inline-style link]Notes.md file to follow my thoughts and steps that guided me to this solution.
