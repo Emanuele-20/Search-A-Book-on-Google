@@ -41,7 +41,7 @@ try{
             }
         } else {
             if (question === "exit"){
-                console.log("Thank you for using this program")
+                console.log("Thank you for using this program ")
                 break;
             }
         }
