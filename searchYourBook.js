@@ -27,13 +27,13 @@ function populateReadingList(selectedBook){
 async function start(){
 try{
     while(true){
-        const question = readlineSync.question("Hello, select 1 to search a book, select 2 to view yor Reading List, 'exit' to interrupt? \n")
+        const question = readlineSync.question("Hello, select 1 to search a book, select 2 to view yor Reading List, 'exit' to interrupt?1\n", (userInput) => {console.log(userInput)})
         if (question === "1"){
-            const book =  readlineSync.question("Which book are you looking for? \n")
-            await getYourBook(book)
-            const selectedBook = readlineSync.keyInSelect(books, "Which book do you want to save in your reading list?")
+            const book =  readlineSync.question("Which book are you looking for? \n", (userInput) => {console.log(userInput)})
+            await getYourBook(book) 
+            const selectedBook = readlineSync.keyInSelect(books, "Which book do you want to save in your reading list?", (userInput) => {console.log(userInput);})
             populateReadingList(selectedBook)
-        } else if (question === "2") {   
+        } else if (question === "2") {    
             if (readingList.length == 0){
                 console.log("Your reading list is empty")
             } else {
@@ -45,9 +45,9 @@ try{
             }
         }
     } 
-    } catch (err){
-        console.log("An error just happened, sorry", err)
-    } 
+} catch (err){
+    console.log("An error just happened, sorry", err)
+} 
 
 };
 
