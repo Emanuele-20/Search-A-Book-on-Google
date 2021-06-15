@@ -17,5 +17,5 @@
 - Enjoy your research
 ---
 ### Challenges faced
-Check the [https://github.com/Emanuele-20/Search-A-Book-on-Google/blob/main/Notes.md]Notes.md file to follow my thoughts and steps that guided me to this solution.
+Check the [Notes.md]([https://github.com/Emanuele-20/Search-A-Book-on-Google/blob/main/Notes.md) file to follow my thoughts and steps that guided me to this solution.
 
