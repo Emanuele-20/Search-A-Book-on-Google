@@ -4,7 +4,7 @@
 
 ### Pruduction Code
 
-1. Create a folder 
+1. Create a folder
 2. Initialize Git
 3. Create README file and a Notes file
 4. Inizialize Npm
@@ -45,7 +45,9 @@ async function getYourBook(){
     return filter
 }
 ```
+
 9. Add "catch" and "try" to manage the error
+
 ```
 async function getYourBook(title){
     try{
@@ -61,11 +63,12 @@ async function getYourBook(title){
         return filter
     } catch (err){
         console.log("Opss, something did wrong", err)
-    } 
+    }
 }
 ```
+
 10. Add readline package to interact with the user
 
 11. Add start() method to let the user comunicate better with the program
-12. Install the "read line Sync" package to acquire the user input 
-13. Automatize the process with a "while" loop, implementing a more friendly user experience 
+12. Install the "read line Sync" package to acquire the user input
+13. Automatize the process with a "while" loop, implementing a more friendly user experience
