@@ -8,15 +8,9 @@ async function getYourBook(title) {
 	try {
 		const fetch = await fetchingData(title);
 		const data = await convertToJson(fetch);
-		data.items.forEach((element) => {
-			books.push(
-				`Title: ${element.volumeInfo.title} - ` +
-					`Author: ${element.volumeInfo.authors[0]} - ` +
-					`Publishing Company: ${element.volumeInfo.publisher}`
-			);
-		});
+		data.items.forEach((element) => populateBooksArray(element));
 	} catch (err) {
-		console.log("Opss, something did wrong", err);
+		manageError(err);
 	}
 }
 
@@ -30,9 +24,21 @@ function convertToJson(promise) {
 	return promise.json();
 }
 
+function populateBooksArray(element) {
+	books.push(
+		`Title: ${element.volumeInfo.title} - ` +
+			`Author: ${element.volumeInfo.authors[0]} - ` +
+			`Publishing Company: ${element.volumeInfo.publisher}`
+	);
+}
+
 function populateReadingList(selectedBook) {
 	readingList.push(books[selectedBook]);
 	console.log("Thank you for your selection");
+}
+
+function manageError(err) {
+	console.log("An error just happened, sorry", err);
 }
 
 async function start() {
@@ -66,7 +72,7 @@ async function start() {
 			}
 		}
 	} catch (err) {
-		console.log("An error just happened, sorry", err);
+		manageError(err);
 	}
 }
 
