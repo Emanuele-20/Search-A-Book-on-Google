@@ -7,10 +7,10 @@ const readingList = [];
 async function getYourBook(title) {
 	try {
 		const resp = await fetch(
-			"https://www.googleapis.com/books/v1/volumes?q=" + title
+			"https://www.googleapis.com/books/v1/volumes?maxResults=5&q=" + title
 		);
 		const data = await resp.json();
-		data.items.slice(0, 5).forEach((element) => {
+		data.items.forEach((element) => {
 			books.push(
 				`Title: ${element.volumeInfo.title} - ` +
 					`Author: ${element.volumeInfo.authors[0]} - ` +
