@@ -6,8 +6,8 @@ const readingList = [];
 
 async function getYourBook(title) {
 	try {
-		const resp = await fetchingData(title);
-		const data = await resp.json();
+		const fetch = await fetchingData(title);
+		const data = await convertToJson(fetch);
 		data.items.forEach((element) => {
 			books.push(
 				`Title: ${element.volumeInfo.title} - ` +
@@ -26,9 +26,12 @@ function fetchingData(title) {
 	);
 }
 
+function convertToJson(promise) {
+	return promise.json();
+}
+
 function populateReadingList(selectedBook) {
 	readingList.push(books[selectedBook]);
-	//books.length = 0;
 	console.log("Thank you for your selection");
 }
 
