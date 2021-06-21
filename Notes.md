@@ -68,7 +68,8 @@ async function getYourBook(title){
 ```
 
 10. Add readline package to interact with the user
-
 11. Add start() method to let the user comunicate better with the program
 12. Install the "read line Sync" package to acquire the user input
 13. Automatize the process with a "while" loop, implementing a more friendly user experience
+
+##
