@@ -6,9 +6,7 @@ const readingList = [];
 
 async function getYourBook(title) {
 	try {
-		const resp = await fetch(
-			"https://www.googleapis.com/books/v1/volumes?maxResults=5&q=" + title
-		);
+		const resp = await fetchingData(title);
 		const data = await resp.json();
 		data.items.forEach((element) => {
 			books.push(
@@ -20,6 +18,12 @@ async function getYourBook(title) {
 	} catch (err) {
 		console.log("Opss, something did wrong", err);
 	}
+}
+
+function fetchingData(title) {
+	return fetch(
+		"https://www.googleapis.com/books/v1/volumes?maxResults=5&q=" + title
+	);
 }
 
 function populateReadingList(selectedBook) {
