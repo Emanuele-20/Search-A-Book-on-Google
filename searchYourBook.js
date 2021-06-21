@@ -34,7 +34,6 @@ function populateBooksArray(element) {
 
 function populateReadingList(selectedBook) {
 	readingList.push(books[selectedBook]);
-	console.log("Thank you for your selection");
 }
 
 function manageError(err) {
@@ -57,6 +56,7 @@ async function start() {
 					"Which book do you want to save in your reading list?\n"
 				);
 				populateReadingList(selectedBook);
+				console.log("Thank you for your selection");
 				books.length = 0;
 			} else if (question === "2") {
 				if (readingList.length === 0) {
