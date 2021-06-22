@@ -13,21 +13,11 @@
 7. Manage the promise to console log the title, authors and publishing company for the first 5 books
 
 ```
-function getYourBook(){
+
     fetch('https://www.googleapis.com/books/v1/volumes?q=Invisible Man')
     .then(answer => {
         return answer.json()
     })
-    .then(answer => {
-        for(let i = 0; i < 5; i++){
-            console.log(answer.items[i].volumeInfo.title)
-            console.log(answer.items[i].volumeInfo.authors[0])
-            console.log(answer.items[i].volumeInfo.publisher)
-            console.log('\n')
-        }
-    })
-    .catch(answer => console.log("Ops, I can't reach this information"))
-}
 ```
 
 8. Trying to implement with async function
@@ -36,11 +26,7 @@ function getYourBook(){
 async function getYourBook(){
     const resp = await fetch('https://www.googleapis.com/books/v1/volumes?q=harrypotter')
     const data = await resp.json()
-    const filter =  await data.items.forEach(el => {
-        console.log(el.volumeInfo.title)
-        console.log(el.volumeInfo.authors[0])
-        console.log(el.volumeInfo.publisher)
-        console.log('\n')
+    const filter =  ....
     })
     return filter
 }
@@ -51,14 +37,7 @@ async function getYourBook(){
 ```
 async function getYourBook(title){
     try{
-        const resp = await fetch('https://www.googleapis.com/books/v1/volumes?q=' + title)
-        const data = await resp.json()
-        const filter = await data.items.slice(0,5)
-            .forEach(element => {
-            console.log('Title:', element.volumeInfo.title)
-            console.log('Author:',element.volumeInfo.authors[0])
-            console.log('Publishing Company:',element.volumeInfo.publisher)
-            console.log('\n')
+        ...
         })
         return filter
     } catch (err){
@@ -75,5 +54,6 @@ async function getYourBook(title){
 ## Refactoring after the first submission
 
 14. In order to have a shorter "getYourBook" method, I have extrapolated many actions into different other functions. Those functions will be now invoked when needed and the code will be more organized and readable
-
 15. Now the result of the "promise" will be filtered on its calling and not with the "slice" method anymore
+16. Created two new folder "src" and "test" in order to separate the pruduction code and the test.
+17. Created a couple of tests

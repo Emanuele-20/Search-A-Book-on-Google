@@ -81,4 +81,6 @@ async function start() {
 module.exports = {
 	fetchingData,
 	convertToJson,
+	getYourBook,
+	manageError,
 };
