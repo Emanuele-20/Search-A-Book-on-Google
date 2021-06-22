@@ -13,11 +13,4 @@ describe("Google Books", () => {
 		await convertToJson(pendingPromise);
 		expect(convertToJson).toHaveBeenCalledWith(pendingPromise);
 	});
-
-	// it("Returns a function correctly called with a book title", async () => {
-	// 	const fetch = await fetchingData("title");
-	// 	const data = await convertToJson(fetch);
-	// 	const data = getYourBook("book");
-	// 	expect(getYourBook).toHaveBeenCalledWith(fetch);
-	// });
 });
