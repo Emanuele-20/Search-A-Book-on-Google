@@ -1,6 +1,6 @@
 ## This challenge will be attack using NodeJS.
 
-### Used Trello card in order to set and track all the steps to follow
+### Used Trello card in order to set and track all the steps to follow and Notion to organize the email, the tech test and the review test.
 
 ### Pruduction Code
 
@@ -72,4 +72,8 @@ async function getYourBook(title){
 12. Install the "read line Sync" package to acquire the user input
 13. Automatize the process with a "while" loop, implementing a more friendly user experience
 
-##
+## Refactoring after the first submission
+
+14. In order to have a shorter "getYourBook" method, I have extrapolated many actions into different other functions. Those functions will be now invoked when needed and the code will be more organized and readable
+
+15. Now the result of the "promise" will be filtered on its calling and not with the "slice" method anymore

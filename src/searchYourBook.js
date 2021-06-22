@@ -76,4 +76,9 @@ async function start() {
 	}
 }
 
-start();
+//start();
+
+module.exports = {
+	fetchingData,
+	convertToJson,
+};
